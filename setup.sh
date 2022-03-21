@@ -15,6 +15,7 @@ echo "Setting up the board using the Trello API.."
 rem pytest -s -v testCases/TC004_RestAPI.py
 
 echo "Running the pytest solution.."
+<<<<<<< HEAD
 rem pytest testCases/TC001_LoginTest.py --browser chrome
 rem pytest testCases/TC002_LinksSmokeTest.py --browser chrome
 rem pytest testCases/TC003_ImgsSmokeTest.py --browser chrome#
@@ -30,6 +31,12 @@ rem pytest testCases/TestAPI006_DELETE_User.py
 rem pytest testCases/TestAPI007_GET_TIMEOUT.py
 rem pytest testCases/TestAPI008_AUTH_Username_Password.py
 rem pytest testCases/TestAPI009_POST_GetAuthToken.py
+=======
+
+rem pytest -s -v  --html=.Reports/report.html testCases/TC002_LinksSmokeTest.py --browser chrome
+rem pytest -s -v  --html=.Reports/report.html testCases/TC003_ImgsSmokeTest.py --browser chrome#
+rem pytest -s -v  --html=.Reports/report.html testCases/TC004_RestAPI.py --browser chrome
+>>>>>>> 5ca1e2bf5503a964cbe98c56b0d891b79e1579b7
 
 echo "Running the BDD tests.."
 behave testCases/features/TC001_loginNegativePath.feature
